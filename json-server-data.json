@@ -1,0 +1,66 @@
+{
+  "contacts": [
+    {
+      "name": "Kementrian Kelautan",
+      "namaSingkat": "Kemenlu",
+      "phone": "085225045953",
+      "provinsi": "Bandung",
+      "kota": "Bandung",
+      "alamat": "Lorem ipsum",
+      "lvlorganisasi": "Direktorat",
+      "namaLvlOrganisasi": "Organisasi 1",
+      "namaAtasan": "Baju",
+      "alamatOrganisasi": "jln. sengon yk",
+      "id": 1
+    }
+  ],
+  "users": [
+    {
+      "jenisUser": "ASN",
+      "namaOrganisasi": "Organisasi 1",
+      "jumlahASN": "1",
+      "nama": "",
+      "nip": "",
+      "password": "Mt7pr",
+      "username": "YgHab",
+      "id": 1
+    },
+    {
+      "jenisUser": "ATASAN",
+      "namaOrganisasi": "",
+      "jumlahASN": 0,
+      "nama": "wwowowow",
+      "nip": "19010101612937",
+      "password": "g4j4h3d4n",
+      "username": "PO9jms",
+      "id": 2
+    },
+    {
+      "jenisUser": "ASN",
+      "namaOrganisasi": "Organisasi 1",
+      "jumlahASN": "2",
+      "nama": "",
+      "nip": "",
+      "password": "gG58N",
+      "username": "nalwn",
+      "id": 4
+    }
+  ],
+  "self": [
+    {
+      "jenisKopetensi": "perempuan",
+      "pendidikanTerakhir": "asdasd",
+      "namaLengkap": "sulthan",
+      "nip": "12312312",
+      "umur": "23",
+      "jenisPeserta": "Bandung",
+      "jabatan": "Bandung",
+      "jenisKelamin": "laki-laki",
+      "riwayatJabatan": "asdasd",
+      "lvlOrganisasi": "asdjasdjjkasd",
+      "lembagaPendidikan": "asd",
+      "training": "asdasd",
+      "id": 1
+    }
+  ]
+}
