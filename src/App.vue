@@ -20,7 +20,7 @@ export default {
 
 
 <style lang="scss">
-  @import "~bootstrap/scss/bootstrap";
+//   @import "~bootstrap/scss/bootstrap";
   $fa-font-path: "~font-awesome/fonts/";
   @import "~font-awesome/scss/font-awesome";
   @import "~placeholder-loading/src/scss/placeholder-loading";
