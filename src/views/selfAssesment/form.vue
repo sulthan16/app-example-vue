@@ -1,5 +1,25 @@
 <template>
   <div>
+    <div class="ui three steps">
+      <div class="step">
+        <i class="fa fa-home fa-3x"></i>
+        <div class="content">
+          <div class="title">Shipping</div>
+        </div>
+      </div>
+      <div class="active step">
+        <i class="fa fa-home fa-3x"></i>
+        <div class="content">
+          <div class="title">Billing</div>
+        </div>
+      </div>
+      <div class="disabled step">
+        <i class="fa fa-home fa-3x"></i>
+        <div class="content">
+          <div class="title">Confirm Order</div>
+        </div>
+      </div>
+    </div>
     <div class="row">
       <div class="col-md-6 col-sm-6">
         <form @submit.prevent="save">
@@ -88,7 +108,7 @@
               id="inputGroupSelect01"
               v-model="payload.jenisKopetensi"
             >
-              <option value="" selected>Choose...</option>
+              <option value selected>Choose...</option>
               <option value="laki-laki">Laki-Laki</option>
               <option value="perempuan">Perempuan</option>
             </select>
@@ -135,18 +155,18 @@ export default {
     return {
       error: null,
       payload: {
-        jenisKopetensi:"",
-        pendidikanTerakhir:"",
-        namaLengkap:"",
-        nip:"",
-        umur:"",
-        jenisPeserta:"",
-        jabatan:"",
-        jenisKelamin:"",
-        riwayatJabatan:"",
-        lvlOrganisasi:"",
-        lembagaPendidikan:"",
-        training:""
+        jenisKopetensi: "",
+        pendidikanTerakhir: "",
+        namaLengkap: "",
+        nip: "",
+        umur: "",
+        jenisPeserta: "",
+        jabatan: "",
+        jenisKelamin: "",
+        riwayatJabatan: "",
+        lvlOrganisasi: "",
+        lembagaPendidikan: "",
+        training: ""
       }
     };
   },
@@ -161,7 +181,7 @@ export default {
         if (this.editMode) {
           const id = this.$route.params.id;
           const { data } = await axios.get(`/self/${id}`);
-          debugger
+          debugger;
           this.payload = data;
         }
       } catch (e) {
@@ -188,3 +208,6 @@ export default {
   }
 };
 </script>
+<style>
+@import '~semantic-ui-step/step.css'
+</style>
