@@ -99,7 +99,7 @@ export default {
     async remove(id) {
       try {
         if (confirm("Are you sure?")) {
-          await axios.delete(`/users/${id}`);
+          await axios.delete(`/self/${id}`);
           this.get();
         }
       } catch (e) {
