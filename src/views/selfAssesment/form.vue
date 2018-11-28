@@ -1,22 +1,28 @@
 <template>
   <div>
-    <div class="ui three steps">
-      <div class="step">
-        <i class="fa fa-home fa-3x"></i>
-        <div class="content">
-          <div class="title">Shipping</div>
-        </div>
-      </div>
+    <div class="ui four steps">
       <div class="active step">
         <i class="fa fa-home fa-3x"></i>
         <div class="content">
-          <div class="title">Billing</div>
+          <div class="title">Profile Umum</div>
         </div>
       </div>
-      <div class="disabled step">
+      <div class="step">
         <i class="fa fa-home fa-3x"></i>
         <div class="content">
-          <div class="title">Confirm Order</div>
+          <div class="title">Pendidikan</div>
+        </div>
+      </div>
+      <div class="step">
+        <i class="fa fa-home fa-3x"></i>
+        <div class="content">
+          <div class="title">Jabatan</div>
+        </div>
+      </div>
+      <div class="step">
+        <i class="fa fa-home fa-3x"></i>
+        <div class="content">
+          <div class="title">Pelatihan</div>
         </div>
       </div>
     </div>
