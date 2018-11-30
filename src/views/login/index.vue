@@ -14,6 +14,7 @@
       >
       <label for="inputPassword" class="sr-only">Password</label>
       <input
+        v-model="password"
         type="password"
         class="form-control"
         placeholder="Password"
@@ -30,22 +31,66 @@
   </div>
 </template>
 <script>
+import axios from "axios";
+import Authencrypt from "../../mixins/authencrypt";
+
 export default {
-    data(){
-        return{
-            username:''
-        }
-    },
-    methods:{
-        login(){
-            localStorage.setItem('role', this.username.toUpperCase());
-            this.$router.push('/');
-        }
-    },
-    beforeCreate(){
-        document.body.className = 'login';
+  mixins: [Authencrypt],
+  data() {
+    return {
+      username: "",
+      password: ""
+    };
+  },
+  methods: {
+    async login() {
+      try {
+        const credentials = {
+          username: this.username,
+          password: this.password
+        };
+
+        var eKey = this.jwt.substring(0, 16);
+        var aKey = this.jwt.substring(16, 32);
+
+        await await axios
+          .post("/auth/login", {
+            credentials: this.encrypt(JSON.stringify(credentials), eKey, aKey)
+          })
+          .then(response => {
+            response = response.data;
+
+                if(response.success){
+                    var data = this.decrypt(response.data, eKey, aKey);
+
+                    localStorage.setItem('token', data.token);
+                    localStorage.setItem('user', JSON.stringify(data.user));
+                    localStorage.setItem('menu', JSON.stringify(data.menu));
+
+                    this.$store.commit('login');
+                    this.$router.push('/');
+
+                    this.state = null;
+                }
+                else{
+                    this.password = null;
+                    this.message  = this.$t('user.' + response.message + '_message');
+                    this.warning  = this.$t('user.' + response.message);
+                    this.state    = 'error';
+                }
+          })
+          .catch(error => {
+            console.log(error);
+          });
+      } catch (e) {
+        console.error(e);
+      }
     }
-}
+  },
+  beforeCreate() {
+    document.body.className = "login";
+  }
+};
 </script>
 
 <style>

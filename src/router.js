@@ -53,6 +53,9 @@ export default new Router({
         {
             path: '/login',
             component: () => import('./views/login/index'),
+            meta: {
+                roles: ['public']
+            }
         }
     ]
 })
