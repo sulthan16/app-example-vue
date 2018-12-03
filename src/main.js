@@ -9,6 +9,8 @@ import './mixin'
 Vue.config.productionTip = false
 
 axios.defaults.baseURL = 'http://localhost/gtsdm/sdmNG'
+axios.defaults.headers.common['Authorization'] = `Bearer ${localStorage.getItem('token')}`
+
 router.beforeEach((to, from, next) => {
     if(to.name == 'login'){
         if(store.state.isLogged)

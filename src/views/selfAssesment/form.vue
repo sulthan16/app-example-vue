@@ -215,5 +215,5 @@ export default {
 };
 </script>
 <style>
-@import '~semantic-ui-step/step.css'
+@import '~semantic-ui-step/step.css';
 </style>

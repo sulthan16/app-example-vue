@@ -81,6 +81,7 @@ export default {
           })
           .catch(error => {
             console.log(error);
+            this.handleApiError(error);
           });
       } catch (e) {
         console.error(e);
