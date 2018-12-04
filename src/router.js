@@ -8,7 +8,10 @@ export default new Router({
     routes: [
         {
             path: '/',
-            component: () => import('./components/Navbar'),
+            component: () => import('./components/layout/index'),
+            meta: {
+                roles: ['admin']
+            },
             children: [{
                 path: '',
                 component: () => import('./views/dashboard/index')
