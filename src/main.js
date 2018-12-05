@@ -8,7 +8,7 @@ import './mixin'
 
 Vue.config.productionTip = false
 
-axios.defaults.baseURL = 'http://localhost/gtsdm/sdmNG'
+axios.defaults.baseURL = 'http://localhost:3000'
 axios.defaults.headers.common['Authorization'] = `Bearer ${localStorage.getItem('token')}`
 
 router.beforeEach((to, from, next) => {

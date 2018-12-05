@@ -84,7 +84,7 @@ export default {
             this.handleApiError(error);
           });
       } catch (e) {
-        console.error(e);
+        console.error(e); this.handleApiError(error);;
       }
     }
   },

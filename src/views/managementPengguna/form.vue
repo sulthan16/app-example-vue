@@ -110,7 +110,7 @@ export default {
           this.payload = data;
         }
       } catch (e) {
-        console.error(e);
+        console.error(e); this.handleApiError(error);;
         this.error = e.message;
       }
     },
@@ -121,7 +121,7 @@ export default {
         this.instansi = response.data;
         this.loaded = true;
       } catch (e) {
-        console.error(e);
+        console.error(e); this.handleApiError(error);;
       }
     },
     makeid() {
@@ -160,7 +160,7 @@ export default {
 
         this.$router.push("/managementPengguna");
       } catch (e) {
-        console.error(e);
+        console.error(e); this.handleApiError(error);;
         this.error = e.message;
       }
     }

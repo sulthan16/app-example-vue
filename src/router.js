@@ -9,48 +9,72 @@ export default new Router({
         {
             path: '/',
             component: () => import('./components/layout/index'),
-            meta: {
-                roles: ['admin']
-            },
             children: [{
                 path: '',
-                component: () => import('./views/dashboard/index')
+                component: () => import('./views/dashboard/index'),
+                meta: {
+                    roles: ['admin']
+                },
             },
             {
                 path: 'managementInstansi',
-                component: () => import('./views/managementInstansi/index')
+                component: () => import('./views/managementInstansi/index'),
+                meta: {
+                    roles: ['admin']
+                },
             },
             {
                 path: 'managementInstansi/add',
-                component: () => import('./views/managementInstansi/form')
+                component: () => import('./views/managementInstansi/form'),
+                meta: {
+                    roles: ['admin']
+                },
             },
             {
                 path: 'managementInstansi/edit/:id',
-                component: () => import('./views/managementInstansi/form')
+                component: () => import('./views/managementInstansi/form'),
+                meta: {
+                    roles: ['admin']
+                },
             },
             {
                 path: 'managementPengguna',
-                component: () => import('./views/managementPengguna/index')
+                component: () => import('./views/managementPengguna/index'),
             },
             {
                 path: 'managementPengguna/add',
-                component: () => import('./views/managementPengguna/form')
+                component: () => import('./views/managementPengguna/form'),
+                meta: {
+                    roles: ['admin']
+                },
             },
             {
                 path: 'managementPengguna/edit/:id',
-                component: () => import('./views/managementPengguna/form')
+                component: () => import('./views/managementPengguna/form'),
+                meta: {
+                    roles: ['admin']
+                },
             },
             {
                 path: 'selfAssesment',
-                component: () => import('./views/selfAssesment/index')
+                component: () => import('./views/selfAssesment/index'),
+                meta: {
+                    roles: ['public']
+                },
             },
             {
                 path: 'selfAssesment/add',
-                component: () => import('./views/selfAssesment/form')
+                component: () => import('./views/selfAssesment/form'),
+                meta: {
+                    roles: ['public']
+                },
             },
             {
                 path: 'selfAssesment/edit/:id',
-                component: () => import('./views/selfAssesment/form')
+                component: () => import('./views/selfAssesment/form'),
+                meta: {
+                    roles: ['public']
+                },
             },]
         },
         {

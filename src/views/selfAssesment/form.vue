@@ -191,7 +191,7 @@ export default {
           this.payload = data;
         }
       } catch (e) {
-        console.error(e);
+        console.error(e); this.handleApiError(error);;
         this.error = e.message;
       }
     },
@@ -207,7 +207,7 @@ export default {
 
         this.$router.push("/selfAssesment");
       } catch (e) {
-        console.error(e);
+        console.error(e); this.handleApiError(error);;
         this.error = e.message;
       }
     }

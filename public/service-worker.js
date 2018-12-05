@@ -1,6 +1,6 @@
 if (workbox) {
   workbox.setConfig({
-    debug: false
+    debug: true
   })
 
   workbox.clientsClaim()
@@ -8,7 +8,7 @@ if (workbox) {
   workbox.precaching.precacheAndRoute(self.__precacheManifest || [])
 
   workbox.routing.registerRoute(
-    /(.*)\/managementInstansi/,
+    /(.*)\/self/,
     workbox.strategies.networkFirst()
   )
 }

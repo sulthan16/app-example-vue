@@ -93,7 +93,7 @@ export default {
         this.contacts = response.data;
         this.loaded = true;
       } catch (e) {
-        console.error(e);
+        console.error(e); this.handleApiError(error);;
       }
     },
     async remove(id) {
@@ -103,7 +103,7 @@ export default {
           this.get();
         }
       } catch (e) {
-        console.error(e);
+        console.error(e); this.handleApiError(error);;
         this.error = e.message;
       }
     }
