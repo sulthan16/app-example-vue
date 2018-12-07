@@ -186,8 +186,7 @@ export default {
       try {
         if (this.editMode) {
           const id = this.$route.params.id;
-          const { data } = await axios.get(`/self/${id}`);
-          debugger;
+          const { data } = await axios.get(`self/${id}`);
           this.payload = data;
         }
       } catch (e) {

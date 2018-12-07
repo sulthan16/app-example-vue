@@ -13,46 +13,49 @@ export default new Router({
                 path: '',
                 component: () => import('./views/dashboard/index'),
                 meta: {
-                    roles: ['admin']
+                    roles: ['public']
                 },
             },
             {
                 path: 'managementInstansi',
                 component: () => import('./views/managementInstansi/index'),
                 meta: {
-                    roles: ['admin']
+                    roles: ['public']
                 },
             },
             {
                 path: 'managementInstansi/add',
                 component: () => import('./views/managementInstansi/form'),
                 meta: {
-                    roles: ['admin']
+                    roles: ['public']
                 },
             },
             {
                 path: 'managementInstansi/edit/:id',
                 component: () => import('./views/managementInstansi/form'),
                 meta: {
-                    roles: ['admin']
+                    roles: ['public']
                 },
             },
             {
                 path: 'managementPengguna',
                 component: () => import('./views/managementPengguna/index'),
+                meta: {
+                    roles: ['public']
+                },
             },
             {
                 path: 'managementPengguna/add',
                 component: () => import('./views/managementPengguna/form'),
                 meta: {
-                    roles: ['admin']
+                    roles: ['public']
                 },
             },
             {
                 path: 'managementPengguna/edit/:id',
                 component: () => import('./views/managementPengguna/form'),
                 meta: {
-                    roles: ['admin']
+                    roles: ['public']
                 },
             },
             {

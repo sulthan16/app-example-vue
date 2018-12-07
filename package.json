@@ -5,7 +5,8 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "prod" : "serve -s dist"
+    "prod" : "serve -s dist",
+    "mock" : "json-server --watch json-server-data.json"
   },
   "dependencies": {
     "aes-js": "^3.1.2",

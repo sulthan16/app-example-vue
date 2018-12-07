@@ -294,7 +294,7 @@ export default {
               items: [
                 {
                   title: "Children 2",
-                  path: "/selfAssesment",
+                  path: "/managementPengguna",
                   icon: "",
                   hasSubmenu: false,
                   cssClass: "",
